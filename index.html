@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Сервер майнкрафта от Пледа</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="icon" href="images/minecraft-logo-1022.png" type="image/png">
+</head>
+<body>
+    <div class="container">
+
+
+        <h1>Добро пожаловать на уютный сервер майнкрафта от Пледа!</h1>
+
+        <button class="copy-ip" onclick="copyIP()">Скопировать IP</button>
+        <p id="ip-address">d4.aurorix.net:25222</p>
+
+        <div class="navigation">
+            <a href="pages/features.html" class="nav-link">Особенности</a>
+            <a href="pages/about.html" class="nav-link">О сервере</a>
+            <a href="pages/faq.html" class="nav-link">FAQ</a>
+        </div>
+    </div>
+
+    <script>
+        // Функция копирования IP в буфер обмена
+        function copyIP() {
+            const ipText = document.getElementById("ip-address").innerText;
+            navigator.clipboard.writeText(ipText)
+                .then(() => {
+                    alert("IP адрес скопирован!");
+                })
+                .catch(err => {
+                    alert("Ошибка копирования IP: " + err);
+                });
+        }
+    </script>
+</body>
+</html>
